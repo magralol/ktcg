@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Range",
+        "value": "range"
+    },
+    {
+        "name": "Melee",
+        "value": "melee"
+    }
+]

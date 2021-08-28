@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Space Marines",
+        "value": "space-marines"
+    },
+    {
+        "name": "Grey Knights",
+        "value": "grey-knights"
+    },
+    {
+        "name": "Imperial Guard",
+        "value": "imperial-guard"
+    },
+    {
+        "name": "Forge World",
+        "value": "forge-world"
+    },
+    {
+        "name": "Ecclesiarchy",
+        "value": "ecclesiarchy"
+    },
+    {
+        "name": "Talons of the Emperor",
+        "value": "talons-of-the-emperor"
+    },
+    {
+        "name": "Thousand Sons",
+        "value": "thousand-sons"
+    },
+    {
+        "name": "Kommandos",
+        "value": "kommandos"
+    },
+    {
+        "name": "Death Guard",
+        "value": "death-guard"
+    },
+    {
+        "name": "Traitor Space Marines",
+        "value": "traitor-space-marines"
+    },
+    {
+        "name": "Chaos Daemons",
+        "value": "chaos-daemons"
+    },
+    {
+        "name": "Craftworlds",
+        "value": "craftworlds"
+    },
+    {
+        "name": "Veteran Guardsman",
+        "value": "veteran-guardsman"
+    },
+    {
+        "name": "Troupes",
+        "value": "troupes"
+    },
+    {
+        "name": "Commorrites",
+        "value": "commorrites"
+    },
+    {
+        "name": "Greenskins",
+        "value": "greenskins"
+    },
+    {
+        "name": "Hunter Cadres",
+        "value": "hunter-cadres"
+    },
+    {
+        "name": "Tomb Worlds",
+        "value": "tomb-worlds"
+    },
+    {
+        "name": "Hive Fleets",
+        "value": "hive-fleets"
+    },
+    {
+        "name": "Cadre Mercenary",
+        "value": "cadre-mercenary"
+    },
+    {
+        "name": "Brood Covens",
+        "value": "brood-covens"
+    }
+]

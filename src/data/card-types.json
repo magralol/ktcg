@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Operative",
+        "value": "operative"
+    },
+    {
+        "name": "Equipment",
+        "value": "equipment"
+    },
+    {
+        "name": "Strategic Ploy",
+        "value": "strategic-ploy"
+    },
+    {
+        "name": "Tactical Ploy",
+        "value": "tactical-ploy"
+    },
+    {
+        "name": "Custom",
+        "value": "custom"
+    }
+]
