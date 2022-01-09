@@ -82,5 +82,9 @@
     {
         "name": "Brood Covens",
         "value": "brood-covens"
+    },
+    {
+        "name": "Hunter Clades",
+        "value": "hunter-clades"
     }
 ]

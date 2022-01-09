@@ -14,6 +14,14 @@
 
             <br>
 
+            <select class="form-select" v-model="weapon.type">
+              <option value="" selected>Type</option>
+              <option value="range">Range</option>
+              <option value="melee">Melee</option>
+            </select>
+
+            <br>
+
             <div class="row row-cols-3">
               <div class="col">
                 <label for="weapon-attack" class="form-label">A</label>
@@ -55,6 +63,7 @@
         modal: null,
         weapon: {
           name: "",
+          type: "",
           a: "",
           bsws: "",
           d: "",
@@ -72,7 +81,7 @@
     },
     methods: {
       toggleModal(){
-        this.weapon = { name: "", a: "", bsws: "", d: "", sr: "", crit: "" };
+        this.weapon = { name: "", type: "", a: "", bsws: "", d: "", sr: "", crit: "" };
         this.modal.toggle();
       },
       addWeapon(){

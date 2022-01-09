@@ -87,7 +87,11 @@
           <label class="form-label" style="width:100%;">Weapons <span class="badge bg-primary" style="float: right; cursor: pointer;" v-on:click="$refs.weaponModal.toggleModal()"><i class="fas fa-plus"></i></span></label>
           <table style="width:100%">
             <tr v-for="(weapon, index) in card.weapons" :key="index">
-              <td><b>{{ weapon.name }}</b></td>
+              <td>
+                <span v-if="weapon.type && weapon.type =='range'">⌖ </span>
+                <span v-if="weapon.type && weapon.type =='melee'">⚔ </span>
+                <b>{{ weapon.name }}</b>
+              </td>
               <!--<td>e</td>-->
               <td style="float: right; cursor: pointer;" v-on:click="removeWeapon(index)"><i class="fas fa-times"></i></td>
             </tr>
@@ -118,6 +122,7 @@
     </div>
 
     <div class="d-grid gap-2" style="padding: 10px;" v-show="card.type != 'type'">
+      <button class="btn btn-primary" type="button" v-on:click="importFromBattlescribe()">Import from Battlescribe</button>
       <button class="btn btn-primary" type="button" v-on:click="$parent.saveCardAsImage()">Download</button>
       <button class="btn btn-primary" type="button" v-on:click="saveCard()">Save</button>
     </div>
@@ -126,35 +131,67 @@
     <WeaponModal ref="weaponModal"/>
     <AbilityModal ref="abilityModal"/>
 
-  </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="bs-import-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Import card from BattleScribe</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <Alert type="info">Note: this is a experimental feature and may not preduce cards as expected</Alert>
+            <ul class="list-group">
+              <li class="list-group-item active" aria-current="true">Operatives</li>
+              <li class="list-group-item" style="cursor: pointer;" v-for="(card, index) in bsCards.operatives" :key="index" @click="selectCard(card)">{{ card.name }} <i class="fas fa-chevron-right" style="float: right;"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
+
+  </div>
   
 </template>
 
 <script>
   import cardTypes from "../data/card-types.json";
   import factions from "../data/factions.json";
+  import battleScribeLinks from "../data/battlescribe-links.json";
 
   import HelpModal from './HelpModal.vue';
   import WeaponModal from './WeaponModal.vue';
   import AbilityModal from './AbilityModal.vue';
+  import Alert from './Alert.vue';
+
+  import battlescribe from "../helpers/battlescribe";
 
   export default {
     props: ['card'],
     components: {
       WeaponModal,
       HelpModal,
-      AbilityModal
+      AbilityModal,
+      Alert
     },
     data(){
       return {
         cardTypes: [],
-        factions: []
+        factions: [],
+        bsCards: [],
+        modal: null
       }
     },
     mounted() {
       this.cardTypes = cardTypes;
       this.factions = factions;
+
+      this.modal = new bootstrap.Modal(document.getElementById('bs-import-modal'), {
+        keyboard: false
+      });
+
     },
     methods: {
       addWeapon(weapon){
@@ -200,6 +237,35 @@
       },
       printCard(){
         window.open("/print?card=" + btoa(encodeURIComponent(JSON.stringify(this.card))), '_blank').focus();
+      },
+      importFromBattlescribe(){
+        if(this.card.faction != ""){
+
+          let t = this;
+
+          fetch(battleScribeLinks[this.card.faction])
+          //fetch('https://raw.githubusercontent.com/BSData/wh40k-killteam/master/2021%20-%20Talons%20of%20the%20Emperor.cat')
+          //fetch('https://raw.githubusercontent.com/BSData/wh40k-killteam/master/2021%20-%20Kommando.cat')
+          .then(response => response.text())
+          .then(function(data) {
+            try {
+              t.bsCards = battlescribe.getCards(data);
+              t.modal.toggle();
+            } catch (err) {
+              alert("Could not load BattleScribe data for faction: " + t.card.faction);
+              console.log(err)
+            }
+          });
+        } else {
+          alert("You need to select a faction before importing BattleScribe data!");
+        }
+      },
+      selectCard(card){
+        this.card.type = "operative";
+        for(let key in card){
+          this.card[key] = card[key];
+        }
+        this.modal.toggle();
       },
       saveCard(){
         let list = "";

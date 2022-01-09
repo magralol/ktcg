@@ -51,7 +51,11 @@
                     <th>!</th>
                 </tr>
                 <tr v-for="(weapon, index) in card.weapons" :key="index">
-                    <td style="text-align: left;">{{ weapon.name }}</td>
+                    <td style="text-align: left;">
+                      <span v-if="weapon.type && weapon.type =='range'">⌖ </span>
+                      <span v-if="weapon.type && weapon.type =='melee'">⚔ </span>
+                      {{ weapon.name }}
+                    </td>
                     <td>{{ weapon.a }}</td>
                     <td>{{ weapon.bsws }}+</td>
                     <td>{{ weapon.d }}</td>
