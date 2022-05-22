@@ -1,90 +1,147 @@
 [
     {
-        "name": "Space Marines",
-        "value": "space-marines"
+        "display": "Legionary",
+        "value": "legionary",
+        "icon": "traitor-space-marines"
     },
     {
-        "name": "Grey Knights",
-        "value": "grey-knights"
+        "display": "Corsair Voidscarred",
+        "value": "corsair-voidscarred",
+        "icon": "craftworlds"
     },
     {
-        "name": "Imperial Guard",
-        "value": "imperial-guard"
+        "display": "Void-Dancer Troupe",
+        "value": "void-dancer-troupe",
+        "icon": "troupes"
     },
     {
-        "name": "Forge World",
-        "value": "forge-world"
+        "display": "Wyrmblade",
+        "value": "wyrmblade",
+        "icon": "brood-covens"
     },
     {
-        "name": "Ecclesiarchy",
-        "value": "ecclesiarchy"
+        "display": "Pathfinder",
+        "value": "pathfinder",
+        "icon": "hunter-cadres"
     },
     {
-        "name": "Talons of the Emperor",
-        "value": "talons-of-the-emperor"
+        "display": "Novitiate",
+        "value": "novitiate",
+        "icon": "ecclesiarchy"
     },
     {
-        "name": "Thousand Sons",
-        "value": "thousand-sons"
+        "display": "Warpcoven",
+        "value": "warpcoven",
+        "icon": "thousand-sons"
     },
     {
-        "name": "Kommandos",
-        "value": "kommandos"
+        "display": "Hunter Clades",
+        "value": "hunter-clades",
+        "icon": "hunter-clades"
     },
     {
-        "name": "Death Guard",
-        "value": "death-guard"
+        "display": "Kommandos",
+        "value": "kommandos",
+        "icon": "kommandos"
     },
     {
-        "name": "Traitor Space Marines",
-        "value": "traitor-space-marines"
+        "display": "Veteran Guardsman",
+        "value": "veteran-guardsman",
+        "icon": "veteran-guardsman"
     },
     {
-        "name": "Chaos Daemons",
-        "value": "chaos-daemons"
+        "display": "Space Marines",
+        "value": "space-marines",
+        "icon": "space-marines"
     },
     {
-        "name": "Craftworlds",
-        "value": "craftworlds"
+        "display": "Grey Knights",
+        "value": "grey-knights",
+        "icon": "grey-knights"
     },
     {
-        "name": "Veteran Guardsman",
-        "value": "veteran-guardsman"
+        "display": "Imperial Guard",
+        "value": "imperial-guard",
+        "icon": "imperial-guard"
     },
     {
-        "name": "Troupes",
-        "value": "troupes"
+        "display": "Forge World",
+        "value": "forge-world",
+        "icon": "forge-world"
     },
     {
-        "name": "Commorrites",
-        "value": "commorrites"
+        "display": "Ecclesiarchy",
+        "value": "ecclesiarchy",
+        "icon": "ecclesiarchy"
     },
     {
-        "name": "Greenskins",
-        "value": "greenskins"
+        "display": "Talons of the Emperor",
+        "value": "talons-of-the-emperor",
+        "icon": "talons-of-the-emperor"
     },
     {
-        "name": "Hunter Cadres",
-        "value": "hunter-cadres"
+        "display": "Thousand Sons",
+        "value": "thousand-sons",
+        "icon": "thousand-sons"
     },
     {
-        "name": "Tomb Worlds",
-        "value": "tomb-worlds"
+        "display": "Death Guard",
+        "value": "death-guard",
+        "icon": "death-guard"
     },
     {
-        "name": "Hive Fleets",
-        "value": "hive-fleets"
+        "display": "Traitor Space Marines",
+        "value": "traitor-space-marines",
+        "icon": "traitor-space-marines"
     },
     {
-        "name": "Cadre Mercenary",
-        "value": "cadre-mercenary"
+        "display": "Chaos Daemons",
+        "value": "chaos-daemons",
+        "icon": "chaos-daemons"
     },
     {
-        "name": "Brood Covens",
-        "value": "brood-covens"
+        "display": "Craftworlds",
+        "value": "craftworlds",
+        "icon": "craftworlds"
     },
     {
-        "name": "Hunter Clades",
-        "value": "hunter-clades"
+        "display": "Troupes",
+        "value": "troupes",
+        "icon": "troupes"
+    },
+    {
+        "display": "Commorrites",
+        "value": "commorrites",
+        "icon": "commorrites"
+    },
+    {
+        "display": "Greenskins",
+        "value": "greenskins",
+        "icon": "greenskins"
+    },
+    {
+        "display": "Hunter Cadres",
+        "value": "hunter-cadres",
+        "icon": "hunter-cadres"
+    },
+    {
+        "display": "Tomb Worlds",
+        "value": "tomb-worlds",
+        "icon": "tomb-worlds"
+    },
+    {
+        "display": "Hive Fleets",
+        "value": "hive-fleets",
+        "icon": "hive-fleets"
+    },
+    {
+        "display": "Cadre Mercenary",
+        "value": "cadre-mercenary",
+        "icon": "cadre-mercenary"
+    },
+    {
+        "display": "Brood Covens",
+        "value": "brood-covens",
+        "icon": "brood-covens"
     }
 ]

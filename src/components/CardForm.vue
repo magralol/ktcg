@@ -162,11 +162,11 @@
   import battleScribeLinks from "../data/battlescribe-links.json";
 
   import HelpModal from './HelpModal.vue';
-  import WeaponModal from './WeaponModal.vue';
+  import WeaponModal from './NewWeaponModal.vue';
   import AbilityModal from './AbilityModal.vue';
   import Alert from './Alert.vue';
 
-  import battlescribe from "../helpers/battlescribe";
+  import battlescribe from "../helpers/battlescribe_old";
 
   export default {
     props: ['card'],

@@ -12,37 +12,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row"><span>⌖</span> Storm bolter</th>
-                <td>4</td>
-                <td>2</td>
-                <td>3/4</td>
-                <td>Relentless</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <th scope="row"><span>⚔</span> Nemesis force weapon</th>
-                <td>5</td>
-                <td>2</td>
-                <td>4/6</td>
-                <td>Leathal 5+</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <th scope="row"><span>⚔</span> Nemesis warding stave</th>
-                <td>5</td>
-                <td>2</td>
-                <td>4/5</td>
-                <td>-</td>
-                <td>Stun</td>
-            </tr>
-            <tr>
-                <th scope="row"><span>⚔</span> Nemesis deamon hammer</th>
-                <td>5</td>
-                <td>3</td>
-                <td>5/6</td>
-                <td></td>
-                <td>Stun</td>
+            <tr v-for="weapon in store.roster.weapons">
+                <th scope="row">
+                    <span v-show="weapon.type == 'range'">⌖</span>
+                    <span v-show="weapon.type == 'melee'">⚔</span>
+                    {{ weapon.name }}
+                </th>
+                <td>{{ weapon.a }}</td>
+                <td>{{ weapon.bsws }}</td>
+                <td>{{ weapon.d }}</td>
+                <td>{{ weapon.sr }}</td>
+                <td>{{ weapon.crit }}</td>
             </tr>
     </tbody>
 </table>
@@ -51,6 +31,9 @@
 </template>
 
 <script setup>
+    import { Store } from '../store';
+
+    const store = Store();
 
 </script>
 

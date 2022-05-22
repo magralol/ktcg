@@ -16,53 +16,21 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">Justicar</th>
-                <td>3</td>
-                <td>3</td>
-                <td>1</td>
-                <td>3</td>
-                <td>3</td>
-                <td>12</td>
+            <tr v-for="operative in store.roster.operatives">
+                <th scope="row">{{ operative.name }}</th>
+                <td>{{ operative.m }}</td>
+                <td>{{ operative.apl }}</td>
+                <td>{{ operative.ga }}</td>
+                <td>{{ operative.df }}</td>
+                <td>{{ operative.sv }}</td>
+                <td>{{ operative.w }}</td>
                 <td>
-                    <a href="#"><span>⌖</span>Storm bolter</a><br>
-                    <a href="#"><span>⚔</span>Nemesis force weapon</a>
-                </td>
-                <td>
-                    <a href="#">Manifest Psychic Power (1AP)</a>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">Justicar</th>
-                <td>3</td>
-                <td>3</td>
-                <td>1</td>
-                <td>3</td>
-                <td>3</td>
-                <td>12</td>
-                <td>
-                    <a href="#"><span>⌖</span>Storm bolter</a><br>
-                    <a href="#"><span>⚔</span>Nemesis warding stave</a>
-                </td>
-                <td>
-                    <a href="#">Manifest Psychic Power (1AP)</a>
-                </td>
-                <td>
-                    <a href="#">Truesilver Armour+ (3EP)</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">Justicar</th>
-                <td>3</td>
-                <td>3</td>
-                <td>1</td>
-                <td>3</td>
-                <td>3</td>
-                <td>12</td>
-                <td>
-                    <a href="#"><span>⌖</span>Storm bolter</a><br>
-                    <a href="#"><span>⚔</span>Nemesis deamon hammer</a>
+                    <a href="#" v-for="weapon in operative.weapons">
+                        <span v-show="weapon.type == 'range'">⌖</span>
+                        <span v-show="weapon.type == 'melee'">⚔</span>
+                        {{ weapon.name }}
+                        <br>
+                    </a>
                 </td>
                 <td>
                     <a href="#">Manifest Psychic Power (1AP)</a>
@@ -76,6 +44,9 @@
 </template>
 
 <script setup>
+
+    import { Store } from '../store';
+    const store = Store();
 
 </script>
 

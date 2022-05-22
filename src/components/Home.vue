@@ -1,4 +1,5 @@
 <template>
+  <Navbar page="legacy"/>
   
   <div class="container">
     
@@ -29,6 +30,7 @@
   import cardTypes from "../data/card-types.json";
   import weaponTypes from "../data/weapon-types.json";
 
+  import Navbar from './Navbar.vue';
   import CardTemplate from './CardTemplate.vue';
   import MarkdownEditor from './MarkdownEditor.vue';
   import HelpModal from './HelpModal.vue';
@@ -39,6 +41,7 @@
 
   export default {
     components:{
+      Navbar,
       List,
       CardForm,
       CardTemplate,
