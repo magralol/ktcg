@@ -1,8 +1,10 @@
 <template>
   <div>
-    <!--<NuxtWelcome />-->
-    <h3>KTRM</h3>
+    <NuxtPage />
   </div>
 </template>
 <script setup>
+
+  const store = useStore();
+
 </script>

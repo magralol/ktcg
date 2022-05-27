@@ -1,0 +1,78 @@
+$dark-gray: #272b30;
+$light-gray: #3a3f44;
+
+$kt-orange: #fe5001;
+
+$body-bg: $dark-gray;
+$body-color: #fff;
+$enable-rounded: false;
+
+$primary: $kt-orange;
+$dropdown-link-hover-bg: mix(#fff, $kt-orange, 80%);
+$link-decoration: none;
+
+$table-bg: $dark-gray;
+
+$list-group-bg: $dark-gray;
+$list-group-border-color: $light-gray;
+
+$card-bg: $dark-gray;
+$card-border-color: $kt-orange;
+
+$modal-content-bg: $dark-gray;
+
+$btn-close-color: #fff;
+$form-select-indicator-color: #fff;
+
+$input-border-color: $light-gray;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+.fa-solid {
+    color: #fff;
+}
+
+.modal-header, .modal-footer {
+    border: 0;
+}
+
+.card-title {
+    color: #fff;
+}
+
+.badge {
+    border: 1px solid $light-gray !important;
+}
+
+.btn-primary {
+    color: #fff;
+}
+
+.list-group-item {
+    border-top: 1px solid $light-gray !important;
+    
+    .list-group-text{
+        color: #fff;
+    }
+
+    .list-group-card {
+        padding: 16px;
+        padding-top: 4px;
+        color: #fff;
+    }
+}
+
+.faction-icon {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(35%) sepia(75%) saturate(2681%) hue-rotate(358deg) brightness(103%) contrast(103%);
+}
+
+.faction-icon-rosters {
+    width: 40px;
+    height:40px;
+}
+
+.faction-icon-roster {
+    height: 80px !important;
+}
